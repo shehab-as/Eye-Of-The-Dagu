@@ -1,4 +1,4 @@
-# Embedded-Vision
+# Eye-Of-The-Dagu
 "works on python 2.7 and opencv2.4"
 
 ### python visual_color_seg.py

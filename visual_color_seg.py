@@ -38,15 +38,16 @@ def nothing(x):    # dummy function so the createTrackbar() method can shut the 
 # HSV Hue (0-360), Saturation (0-100), Value/Brightness (0-100) 
 HSV_image = "HSV image"
 cv2.namedWindow(HSV_image, cv2.WINDOW_NORMAL)
-cv2.createTrackbar('Low_H', HSV_image, 0, 360, nothing)
-cv2.createTrackbar('Low_S', HSV_image, 0, 100, nothing)
-cv2.createTrackbar('Low_V', HSV_image, 0, 100, nothing)
-cv2.createTrackbar('High_H', HSV_image, 0, 360, nothing)
-cv2.createTrackbar('High_S', HSV_image, 0, 100, nothing)
-cv2.createTrackbar('High_V', HSV_image, 0, 100, nothing)
+cv2.createTrackbar('Low_H', HSV_image, 0, 180, nothing)
+cv2.createTrackbar('Low_S', HSV_image, 0, 255, nothing)
+cv2.createTrackbar('Low_V', HSV_image, 0, 255, nothing)
+cv2.createTrackbar('High_H', HSV_image, 0, 180, nothing)
+cv2.createTrackbar('High_S', HSV_image, 0, 255, nothing)
+cv2.createTrackbar('High_V', HSV_image, 0, 255, nothing)
 # cv2.namedWindow("thresh image", cv2.WINDOW_AUTOSIZE)
 
-vs = cv2.VideoCapture(0)    # VideoCapture not fixed.
+# VideoCapture not fixed. If you get image scan error, you're probably accessing the wrong camera, try to change to VideoCapture(1)
+vs = cv2.VideoCapture(0)    
 # vs.set(cv2.CAP_PROP_BRIGHTNESS, 255)
 # vs.set(cv2.CAP_PROP_AUTOFOCUS, 1)
 vs.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)

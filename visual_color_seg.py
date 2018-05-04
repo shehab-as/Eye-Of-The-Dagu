@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 
-    # Currently Used one
 def segment_color(img, lower, upper):
     """
     :param img: Image to isolate teh color of
@@ -34,8 +33,8 @@ def segment_color(img, lower, upper):
 def nothing(x):    # dummy function so the createTrackbar() method can shut the F up.
     pass    
 
-
-# HSV Hue (0-360), Saturation (0-100), Value/Brightness (0-100) 
+# OpenCV RGB Red (0-255), Green (0-255), Blue (0-255)
+# OpenCV HSV Hue (0-180), Saturation (0-255), Value/Brightness (0-255) 
 HSV_image = "HSV image"
 cv2.namedWindow(HSV_image, cv2.WINDOW_NORMAL)
 cv2.createTrackbar('Low_H', HSV_image, 0, 180, nothing)
